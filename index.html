@@ -106,15 +106,42 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <nav class="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="#my-wedding" class="nav-item nav-link active">Our Wedding</a>
-          <a href="#nhan-vat" class="nav-item nav-link">Cặp đôi</a>
-          <a href="#su-kien" class="nav-item nav-link">Sự kiện</a>
-          <a href="#album-anh-cuoi" class="nav-item nav-link">Album ảnh cưới</a>
-          <a href="#cau-chuyen" class="nav-item nav-link">Câu chuyện</a>
+          <a
+            id="choice1"
+            onclick="changeChoice(event)"
+            href="#my-wedding"
+            class="nav-item nav-link active"
+            >Our Wedding</a
+          >
+          <a
+            id="choice2"
+            onclick="changeChoice(event)"
+            href="#nhan-vat"
+            class="nav-item nav-link"
+            >Cặp đôi</a
+          >
+          <a
+            id="choice3"
+            onclick="changeChoice(event)"
+            href="#su-kien"
+            class="nav-item nav-link"
+            >Sự kiện</a
+          >
+          <a
+            id="choice4"
+            onclick="changeChoice(event)"
+            href="#album-anh-cuoi"
+            class="nav-item nav-link"
+            >Album ảnh cưới</a
+          >
+          <a
+            id="choice5"
+            onclick="changeChoice(event)"
+            href="#cau-chuyen"
+            class="nav-item nav-link"
+            >Câu chuyện</a
+          >
         </nav>
-        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
-          >Xác nhận tham dự<i class="fa fa-arrow-right ms-3"></i
-        ></a>
       </div>
     </nav>
     <!-- Navbar End -->
@@ -342,7 +369,7 @@
                 <div
                   class="p-4 text-center border border-5 border-light border-top-0"
                 >
-                  <h4 class="mb-3">Gia tiên nhà gái</h4>
+                  <h4 style="color: #ab7442" class="mb-3">Gia tiên nhà gái</h4>
                   <p>08:00 AM, 14-07-2024</p>
                   <p>
                     Số 19, đường Thạch Hãn, phường Thuận Hòa, thành phố Huế,
@@ -365,7 +392,7 @@
                 <div
                   class="p-4 text-center border border-5 border-light border-top-0"
                 >
-                  <h4 class="mb-3">Tiệc cưới nhà gái</h4>
+                  <h4 style="color: #ab7442" class="mb-3">Tiệc cưới nhà gái</h4>
                   <p>11:30 AM, 14-07-2024</p>
                   <p>
                     Nhà hàng Nam Châu Hội Quán, số 07 Vạn Xuân, thành phố Huế,
@@ -388,7 +415,7 @@
                 <div
                   class="p-4 text-center border border-5 border-light border-top-0"
                 >
-                  <h4 class="mb-3">Gia tiên nhà trai</h4>
+                  <h4 style="color: #ab7442" class="mb-3">Gia tiên nhà trai</h4>
                   <p>09:00 AM, 16-07-2024</p>
                   <p>
                     Số 126 Tạ Quang Bửu, phường Bắc Nghĩa, thành phố Đồng Hới,
@@ -411,7 +438,9 @@
                 <div
                   class="p-4 text-center border border-5 border-light border-top-0"
                 >
-                  <h4 class="mb-3">Tiệc cưới nhà trai</h4>
+                  <h4 style="color: #ab7442" class="mb-3">
+                    Tiệc cưới nhà trai
+                  </h4>
                   <p>11:30 AM, 16-07-2024</p>
                   <p>
                     TT Tổ chức Sự kiện Nam Thảo, 25 Nguyễn Gia Thiều, Bắc Nghĩa,
@@ -668,19 +697,51 @@
           >
             Thanks for all 💝
           </h1>
-          <br />
-          <br />
-          <img
-            width="200"
-            style="border-radius: 10px"
-            src="img/MyQR.jpg"
-            alt="Quét mã gửi mừng cưới"
-          />
-          <p style="color: #ab7442; font-weight: 700">
-            Ngân hàng Quân đội MB Bank
-          </p>
-          <p style="color: #ab7442; font-weight: 700">5210101041996</p>
-          <p style="color: #ab7442; font-weight: 700">TRAN NGOC TRUNG</p>
+          <div class="row g-4 xac-nhan my-3">
+            <div class="col-lg-6 col-md-6">
+              <div class="my-2">
+                <label
+                  style="cursor: pointer; color: #ab7442; font-weight: 700"
+                  for="nhapten"
+                  >Nhập tên</label
+                >
+                <input class="form-control" id="nhapten" type="text" />
+              </div>
+              <div>
+                <label
+                  style="cursor: pointer; color: #ab7442; font-weight: 700"
+                  for="loichuc"
+                  >Lời chúc</label
+                >
+                <textarea
+                  id="loichuc"
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div>
+                <div onclick="guiLoiChuc()" class="btn my-2 btn-xac-nhan">
+                  Gửi lời chúc
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+              <img
+                class="my-3"
+                width="200"
+                style="border-radius: 10px"
+                src="img/MyQR.jpg"
+                alt="Quét mã gửi mừng cưới"
+              />
+              <p style="color: #ab7442; font-weight: 700">
+                Ngân hàng Quân đội MB Bank
+              </p>
+              <p style="color: #ab7442; font-weight: 700">5210101041996</p>
+              <p style="color: #ab7442; font-weight: 700">TRAN NGOC TRUNG</p>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <h3
@@ -714,14 +775,44 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function guiLoiChuc() {
+        var ten = document.getElementById("nhapten").value;
+        var loichuc = document.getElementById("loichuc").value;
+
+        console.log(ten, loichuc);
+
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "tranngoctrung1496@gmail.com",
+          Password: "76FAC94A5DFBF5AD44039644EB249BF5DE4E",
+          To: "tranngoctrung1496@gmail.com",
+          From: "tranngoctrung1496@gmail.com",
+          Subject: "Loi Chuc",
+          Body: ten + "-" + loichuc,
+        }).then((message) =>
+          Swal.fire({
+            title: "Lời chúc của "+ten+ " đã được gửi",
+            text: "Chúng tôi xin chân thành cám ơn",
+            imageUrl: "https://i.pinimg.com/originals/51/e5/8c/51e58c603af1422fedd5176d5058ef7a.jpg",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image",
+            timer: 5000,
+          })
+        );
+      }
+    </script>
+    <!-- <script type="module" src="js/connectDB.js"></script> -->
     <script>
       //<![CDATA[
       // Set the date we're counting down to (MM/dd/yyyy format)
       const countDownDate = new Date("07/14/2024 11:30:00").getTime();
-      console.log(countDownDate);
       // Update the countdown every 1 second
       const x = setInterval(function () {
         const now = new Date().getTime();
@@ -775,6 +866,29 @@
           modal.style.display = "none";
         }
       };
+    </script>
+    <script>
+      let choice = "choice1";
+      function changeChoice(event) {
+        document.getElementById("choice1").classList.remove("active");
+        document.getElementById("choice2").classList.remove("active");
+        document.getElementById("choice3").classList.remove("active");
+        document.getElementById("choice4").classList.remove("active");
+        document.getElementById("choice5").classList.remove("active");
+        document.getElementById("choice6").classList.remove("active");
+        const element = document.getElementById(event.target.id);
+        element.classList.add("active");
+      }
+
+      const input = document.getElementById("chonanh");
+      const image = document.getElementById("img-preview");
+
+      input.addEventListener("change", (e) => {
+        if (e.target.files.length) {
+          const src = URL.createObjectURL(e.target.files[0]);
+          image.src = src;
+        }
+      });
     </script>
   </body>
 </html>

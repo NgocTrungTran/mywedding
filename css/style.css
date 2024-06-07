@@ -847,13 +847,13 @@ a:focus-within {
   z-index: 11;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
-  transition: visibility .5s;
+  transition: visibility 0.5s;
   left: 0;
   bottom: 0;
   display: block;
 }
 .hotline-phone-ring-circle {
-	width: 85px;
+  width: 85px;
   height: 85px;
   top: 10px;
   left: 10px;
@@ -863,14 +863,14 @@ a:focus-within {
   border: 2px solid #ab7442;
   -webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
   animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
-  transition: all .5s;
+  transition: all 0.5s;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   opacity: 0.5;
 }
 .hotline-phone-ring-circle-fill {
-	width: 55px;
+  width: 55px;
   height: 55px;
   top: 25px;
   left: 25px;
@@ -880,14 +880,14 @@ a:focus-within {
   border: 2px solid transparent;
   -webkit-animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
   animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
-  transition: all .5s;
+  transition: all 0.5s;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
 .hotline-phone-ring-img-circle {
-	background-color: #ab7442;
-	width: 33px;
+  background-color: #ab7442;
+  width: 33px;
   height: 33px;
   top: 37px;
   left: 37px;
@@ -908,14 +908,14 @@ a:focus-within {
   justify-content: center;
 }
 .hotline-phone-ring-img-circle .pps-btn-img {
-	display: -webkit-box;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .hotline-phone-ring-img-circle .pps-btn-img img {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 .hotline-bar {
   position: absolute;
@@ -1019,7 +1019,7 @@ a:focus-within {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -1030,22 +1030,34 @@ a:focus-within {
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-  from {left:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes animatetop {
-  from {left:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 /* The Close Button */
@@ -1070,7 +1082,6 @@ a:focus-within {
 }
 
 .modal-body {
-  height: 700px;
   background-image: url(../img/bgmungcuoi.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1081,4 +1092,38 @@ a:focus-within {
   padding: 2px 16px;
   background-color: #ab7442;
   color: white;
+}
+
+#img-preview {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+input[type="file"] {
+  opacity: 0;
+}
+
+.click-chon-anh {
+  color: #ab7442;
+  border: #ab7442 solid 1px;
+  border-radius: 5px;
+}
+
+.click-chon-anh:hover {
+  background-color: #ab7442;
+  color: white;
+}
+
+.btn-xac-nhan {
+  color: #ab7442;
+  border: #ab7442 solid 1px;
+  margin: auto;
+  font-size: larger;
+}
+
+.btn-xac-nhan:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #ab7442;
 }
