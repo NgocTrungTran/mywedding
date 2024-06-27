@@ -35,6 +35,10 @@
     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
   });
+  $(".on-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+    return false;
+  });
 
 
   // Facts counter
