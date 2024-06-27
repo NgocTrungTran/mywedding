@@ -36,6 +36,7 @@
     return false;
   });
 
+
   // Facts counter
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
@@ -51,8 +52,8 @@
     loop: true,
     nav: true,
     navText: [
-      '<i class="bi bi-chevron-left"></i>',
-      '<i class="bi bi-chevron-right"></i>',
+      '<i class="bi bi-caret-left"></i>',
+      '<i class="bi bi-caret-right"></i>',
     ],
   });
 
